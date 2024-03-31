@@ -31,6 +31,12 @@ A Makefile consists of rules, each defining how to build a specific target. The 
 2. **Defining Targets**: Specify the targets, dependencies, and commands for building.
 3. **Executing**: Run `make` command in the terminal to execute the Makefile.
 
+## Tools Used
+
+- **Text Editor**: NeoVim
+- **Terminal**: Zsh
+- **Compiler**: gcc
+
 
 ## Example Makefile
 
