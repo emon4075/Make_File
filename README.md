@@ -11,6 +11,27 @@ A Makefile consists of rules, each defining how to build a specific target. The 
 - **Dependencies**: Files or actions that must be completed before the target can be built.
 - **Commands**: Shell commands to execute in order to build the target.
 
+
+## Explanation:
+
+- **CC**: Compiler command.
+- **CFLAGS**: Compiler flags for debugging, warnings, etc.
+- **TARGET**: Name of the executable.
+- **SRCS**: List of C source files.
+- **OBJS**: Object files derived from source files.
+- **all**: Default target to build the executable.
+- **$(TARGET)**: Rule to build the target executable.
+- **%.o**: Rule to compile individual source files into object files.
+- **clean**: Rule to remove compiled files.
+
+
+## How to Use
+
+1. **Writing**: Create a file named `Makefile` (or with `.mk` extension) in the project directory.
+2. **Defining Targets**: Specify the targets, dependencies, and commands for building.
+3. **Executing**: Run `make` command in the terminal to execute the Makefile.
+
+
 ## Example Makefile
 
 ```make
@@ -43,23 +64,3 @@ $(TARGET): $(OBJS)
 # Clean rule
 clean:
     rm -f $(OBJS) $(TARGET)
-
-
-## Explanation:
-
-- **CC**: Compiler command.
-- **CFLAGS**: Compiler flags for debugging, warnings, etc.
-- **TARGET**: Name of the executable.
-- **SRCS**: List of C source files.
-- **OBJS**: Object files derived from source files.
-- **all**: Default target to build the executable.
-- **$(TARGET)**: Rule to build the target executable.
-- **%.o**: Rule to compile individual source files into object files.
-- **clean**: Rule to remove compiled files.
-
-
-## How to Use
-
-1. **Writing**: Create a file named `Makefile` (or with `.mk` extension) in the project directory.
-2. **Defining Targets**: Specify the targets, dependencies, and commands for building.
-3. **Executing**: Run `make` command in the terminal to execute the Makefile.
